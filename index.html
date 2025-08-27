@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>courses</title>
+    
+  </head>
+     <body>
+     
+         <header>
+            <h2><a href="index.html" class="logo">courses</a></h2>
+            <ul>
+              <li><a href="index.html">home</a></li>
+              <li><a href="rapport.html">rapport</a></li>
+              <li><a href="réunion1.html">Réunion1</a></li>
+              <li><a href="about.html">about</a></li>
+            </ul>
+         </header>
+              <section class="main">
+
+                <img src="images/stars1.webp">
+                <div class="box">
+
+                <div class="box1">
+                  <div class="boxp">
+                    <p class="q">Quinté+</p>
+                    <p class="c">Quarté</p>
+                    <p class="j">Tiercé</p>
+                    <p class="m">Couplé</p>
+                    <p class="t">Simple</p>
+                  </div>
+                  <p id="date"></p>
+                  <p id="r1"></p>
+                  <p id="course"></p>
+                </div>
+                <hr>
+
+
+                <div class="box2">
+                  <div class="horse">
+                    <img src="images/Horsea.png">
+                  </div>
+
+                  <p>pronostic</p>
+                  <p id="nomber" class="nomber"><b></b></p>
+                </div>
+                <div class="boxa">
+                      <a href="rapport.html" class="btn1"><b>RAPPORT</b></a>
+                      <a href="réunion1.html" class="btn2"><b>RÉUNION 1</b></a>
+                      <a href="about.html" class="btn3"><b>ABOUT</b></a>
+                     
+                     
+                     
+
+
+
+                    
+
+                </div>
+                
+
+              </div>
+
+              </section>
+              
+               <script>
+    fetch('data.json?t=' + Date.now(), { cache: "no-store" })
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('date').textContent = data.date;
+        document.getElementById('r1').textContent = data.r1;
+        document.getElementById('course').textContent = data.course;
+        document.getElementById('nomber').textContent = data.nomber;
+        
+      })
+     
+  </script>
+       
+
+     </body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="rapport.css">
+    <title>courses</title>
+    
+  </head>
+     <body>
+         <header>
+            <h2><a href="index.html" class="logo">courses</a></h2>
+            <ul>
+              <li><a href="index.html">home</a></li>
+              <li><a href="rapport.html">rapport</a></li>
+              <li><a href="réunion1.html">Réunion1</a></li>
+              <li><a href="about.html">about</a></li>
+            </ul>
+         </header>
+              <section class="main">
+
+                <img src="images/stars1.webp">
+                <div class="box">
+                    <div class="fargh"></div>
+
+                <div class="box1">
+                  <div class="boxp">
+                    <p class="q">Quinté+</p>
+                    <p class="c">Quarté</p>
+                    <p class="j">Tiercé</p>
+                    <p class="m">Couplé</p>
+                    <p class="t">Simple</p>
+                  </div>
+                  <p id="date" class="date"></p>
+                  <p id="r1" class="r1"></p>
+                 
+                  
+                </div>
+                <hr>
+
+
+                <div class="box2">
+                    <p class="Arrivée">Arrivée</p>
+                    <h4 id="arrive"><b></b></h4>
+                    <p class="q">Quinté+</p>
+
+                    <div class="order">
+                        <h3>order:</h3>
+                        <p id="quinte"><b></b></p>
+                    </div>
+                    
+                    
+                    <div class="order">
+                        <h3>Désordre:</h3>
+                        <p id="desorde"><b></b></p>
+                    </div>
+                    <div class="order">
+                        <h3>Bonus 4:</h3>
+                        <p id="bonus4"><b></b></p>
+                    </div>
+                    <div class="order">
+                        <h3>Bonus 3:</h3>
+                        <p id="bonus3"><b></b></p>
+                    </div>
+
+                    <p class="qua">Quarté</p>
+                    
+                    <div class="order">
+                        <h3>order:</h3>
+                        <p id="Quarteorder"><b></b></p>
+                    </div>
+                    <div class="order">
+                        <h3>Désordre:</h3>
+                        <p id="QuarteDésordre"><b></b></p>
+                    </div>
+                    
+                    <p class="t">Tiercé</p>
+                    
+                    <div class="order">
+                        <h3>order:</h3>
+                        <p id="Tierceorder"><b></b></p>
+                    </div>
+                    <div class="order">
+                        <h3>Désordre:</h3>
+                        <p id="TierceDésordre"><b></b></p>
+                    </div>
+                  
+
+                  
+                </div>
+               
+                
+
+              </div>
+
+              </section>
+              
+              <script>
+    fetch('data-rapport.json?t=' + Date.now(), { cache: "no-store" })
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('date').textContent = data.date;
+        document.getElementById('r1').textContent = data.r1;
+        document.getElementById('arrive').textContent = data.arrive;
+        document.getElementById('quinte').textContent = data.quinte;
+        document.getElementById('desorde').textContent = data.desorde;
+        document.getElementById('bonus4').textContent = data.bonus4;
+        document.getElementById('bonus3').textContent = data.bonus3;
+        document.getElementById('Quarteorder').textContent = data.Quarteorder;
+        document.getElementById('QuarteDésordre').textContent = data.QuarteDésordre;
+        document.getElementById('Tierceorder').textContent = data.Tierceorder;
+        document.getElementById('TierceDésordre').textContent = data.TierceDésordre;
+      })
+     
+  </script>
+              
+              
+       
+
+     </body>
+</html>
